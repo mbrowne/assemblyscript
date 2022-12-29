@@ -1,0 +1,10 @@
+{
+  "name": "menta-examples",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "as-wasi": "^0.1.1"
+  }
+}

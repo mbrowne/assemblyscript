@@ -1,0 +1,10 @@
+{
+  "name": "add",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "../../bin/asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --debug"
+  }
+}

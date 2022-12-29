@@ -1,0 +1,31 @@
+{
+    "extends": "./std/portable.json",
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "target": "esnext",
+      "outDir": "./build",
+      "types" : ["node"],
+      "allowJs": false,
+      "sourceMap": true,
+      "skipLibCheck": true,
+      "useDefineForClassFields": false,
+      "strict": true,
+      "noImplicitReturns": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "esModuleInterop": true
+    },
+    "include": [
+      "./**/*.ts"
+    ],
+    "exclude": [
+      "./**/node_modules/",
+      "./tests/**",
+      "./lib/**",
+      "./src/glue/wasm/**"
+    ],
+    "references": [
+      {"path": "./src"}
+    ]
+  }
+  
