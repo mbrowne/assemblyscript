@@ -68,7 +68,7 @@ export const enum Token {
   Finally,      // ES2017
   For,          // ES2017
   From,         // AS possible identifier
-  Function,     // ES2017
+  Func,
   Get,
   If,           // ES2017
   Implements,   // ES2017 non-lexical
@@ -242,9 +242,9 @@ export function tokenFromKeyword(text: string): Token {
         if (text == "false") return Token.False;
         if (text == "for") return Token.For;
         if (text == "from") return Token.From;
+        if (text == "func") return Token.Func;
         break;
       }
-      if (text == "function") return Token.Function;
       if (text == "finally") return Token.Finally;
       break;
     }

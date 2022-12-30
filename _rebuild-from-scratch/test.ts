@@ -6,7 +6,7 @@ import { CharCode } from "./src/util";
 import { DiagnosticCode, DiagnosticEmitter, DiagnosticMessage } from "./src/diagnostics";
 import { CommonFlags } from './src/common';
 
-// const CODE = `export function add(a: i32, b: i32): i32 { return a + b; }`;
+// const CODE = `export func add(a: i32, b: i32): i32 { return a + b; }`;
 const CODE = `export define Foo { }`;
 
 class Parser extends DiagnosticEmitter {
@@ -118,7 +118,7 @@ class Parser extends DiagnosticEmitter {
     if (startPos < 0) startPos = tn.nextTokenPos;
     console.log('first', first);
     switch (first) {
-      case Token.Function:
+      case Token.Func:
         tn.next();
         statement = this.parseFunction(tn, flags, decorators, startPos);
         decorators = null;
@@ -142,7 +142,7 @@ class Parser extends DiagnosticEmitter {
     startPos: i32
   ): FunctionDeclaration | null {
 
-    // at 'function':
+    // at 'func':
     //  Identifier
     //  ('<' TypeParameters)?
     //  '(' Parameters (':' Type)?

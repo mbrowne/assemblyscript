@@ -1308,7 +1308,7 @@ export class FloatLiteralExpression extends LiteralExpression {
   }
 }
 
-/** Represents a function expression using the 'function' keyword. */
+/** Represents a function expression using the 'func' keyword. */
 export class FunctionExpression extends Expression {
   constructor(
     /** Inline function declaration. */
@@ -2047,7 +2047,7 @@ export const enum ArrowKind {
   Single
 }
 
-/** Represents a `function` declaration. */
+/** Represents a `func` declaration. */
 export class FunctionDeclaration extends DeclarationStatement {
   constructor(
     /** Simple name being declared. */
